@@ -25,26 +25,6 @@ else:
     print(f"Erro: {result.error_message}")
 ```
 
-## Arquitetura
-
-```mermaid
-graph TD
-    A[AudioDownloader] --> B[DownloaderConfig]
-    A --> C[FileSystemManager]
-    A --> D[YtDlpOptionsBuilder]
-    A --> E[DownloadResult]
-    
-    C --> F[Validação de Diretórios]
-    C --> G[Sanitização de Nomes]
-    C --> H[Resolução de Caminhos]
-    
-    D --> I[Configuração de Formato]
-    D --> J[Parâmetros yt-dlp]
-    
-    E --> K[Validação Pydantic]
-    E --> L[Exportação JSON]
-```
-
 ## Fluxo de Download
 
 ```mermaid

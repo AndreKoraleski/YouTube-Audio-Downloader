@@ -121,3 +121,25 @@ class FileSystemManager:
 
         logger.info(f"Sistema de arquivos preparado para download: {destination}")
         return destination
+
+    
+    def get_file_size(self, path: Path) -> int:
+        """
+        Obtém o tamanho do arquivo em bytes.
+
+        Args:
+            path (Path): Caminho do arquivo.
+
+        Returns:
+            int: Tamanho do arquivo em bytes.
+
+        Raises:
+            FileNotFoundError: Se o arquivo não existir.
+        """
+        if not path.exists():
+            logger.error(f"Arquivo não encontrado para obter tamanho: {path}")
+            raise FileNotFoundError(f"Arquivo não encontrado: {path}")
+
+        size = path.stat().st_size
+        logger.debug(f"Tamanho do arquivo {path}: {size} bytes")
+        return size

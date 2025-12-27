@@ -12,6 +12,7 @@ class DownloaderConfig:
         filename (Literal["title", "id"]): Esquema de nomenclatura do arquivo.
         overwrite_existing (bool): Se deve sobrescrever arquivos existentes.
         create_subdirectories (bool): Se deve criar subdiretórios para organizar downloads.
+        create_result_file (bool): Se deve criar um arquivo de resultados após o download.
 
         audio_quality (Literal["best", "balanced", "worst"]): Qualidade do áudio a ser baixado.
         preferred_codec (Literal["opus", "aac", "mp3"] | None): Codec de áudio preferido.
@@ -26,6 +27,7 @@ class DownloaderConfig:
     filename: Literal["title", "id"] = "title"
     overwrite_existing: bool = False
     create_subdirectories: bool = True
+    create_result_file: bool = True
 
     # --- Seleção de Stream ---
     audio_quality: Literal["best", "balanced", "worst"] = "best"

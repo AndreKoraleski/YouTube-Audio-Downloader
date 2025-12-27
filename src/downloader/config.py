@@ -16,7 +16,6 @@ class DownloaderConfig:
 
         audio_quality (Literal["best", "balanced", "worst"]): Qualidade do áudio a ser baixado.
         preferred_codec (Literal["opus", "aac", "mp3"] | None): Codec de áudio preferido.
-        maximum_bitrate_kbps (int | None): Taxa máxima de bits para o áudio.
 
         retries (int): Número de tentativas em caso de falha no download.
         timeout_seconds (int): Tempo limite para cada tentativa de download em segundos.
@@ -32,7 +31,6 @@ class DownloaderConfig:
     # --- Seleção de Stream ---
     audio_quality: Literal["best", "balanced", "worst"] = "best"
     preferred_codec: Literal["opus", "aac", "mp3"] | None = "opus"
-    maximum_bitrate_kbps: int | None = None
 
     # --- Robustez ---
     retries: int = 3

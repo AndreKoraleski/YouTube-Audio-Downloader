@@ -30,7 +30,7 @@ class DownloaderConfig:
 
     # --- Seleção de Stream ---
     audio_quality: Literal["best", "balanced", "worst"] = "best"
-    preferred_codec: Literal["opus", "aac", "mp3"] | None = "opus"
+    preferred_codec: Literal["opus", "aac"] | None = "opus"
 
     # --- Robustez ---
     retries: int = 3

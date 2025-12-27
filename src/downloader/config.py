@@ -1,5 +1,4 @@
 from dataclasses import dataclass
-from pathlib import Path
 from typing import Literal
 
 
@@ -9,7 +8,7 @@ class DownloaderConfig:
     Configurações para download de áudio via yt-dlp (sem pós-processamento).
 
     Attributes:
-        output_directory (Path): Diretório onde os arquivos baixados serão salvos.
+        output_directory (str): Diretório onde os arquivos baixados serão salvos.
         filename (Literal["title", "id"]): Esquema de nomenclatura do arquivo.
         overwrite_existing (bool): Se deve sobrescrever arquivos existentes.
         create_subdirectories (bool): Se deve criar subdiretórios para organizar downloads.
@@ -23,7 +22,7 @@ class DownloaderConfig:
     """
 
     # --- Salvamento ---
-    output_directory: Path = Path("downloads")
+    output_directory: str = "downloads"
     filename: Literal["title", "id"] = "title"
     overwrite_existing: bool = False
     create_subdirectories: bool = True

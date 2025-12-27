@@ -4,8 +4,13 @@ version = "0.1.0"
 description = "Download de vídeos do YouTube usando yt-dlp."
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "yt-dlp>=2025.12.8",
+]
 
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/downloader"]

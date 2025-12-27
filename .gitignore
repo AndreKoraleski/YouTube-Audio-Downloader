@@ -11,3 +11,6 @@ wheels/
 
 # Arquivos de configuração do IDEs
 .vscode/
+
+# Diretórios de download temporários
+downloads/

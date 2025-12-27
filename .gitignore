@@ -1,0 +1,13 @@
+# Arquivos gerados pelo Python
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Ambientes virtuais
+.venv
+
+# Arquivos de configuração do IDEs
+.vscode/
